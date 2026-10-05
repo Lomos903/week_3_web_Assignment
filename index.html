@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Budget Tracker</title>
+  
+  <!-- Google Fonts: Inter (Body) & Poppins (Headings) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="container">
+    <!-- Header Card -->
+    <header class="card header-card">
+      <h1>Budget Tracker</h1>
+      <p class="subtitle">Track your daily expenses and manage your personal finance effortlessly.</p>
+    </header>
+
+    <!-- Add Expense Form Card -->
+    <section class="card form-card">
+      <h2>Add New Expense</h2>
+      <form id="expense-form">
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input type="text" id="description" placeholder="e.g., Groceries" required>
+        </div>
+
+        <div class="form-group">
+          <label for="category">Category</label>
+          <select id="category" required>
+            <option value="" disabled selected>Select Category</option>
+            <option value="Food">Food & Dining</option>
+            <option value="Transportation">Transportation</option>
+            <option value="Utilities">Utilities</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="amount">Amount ($)</label>
+          <input type="number" id="amount" placeholder="0.00" step="0.01" required>
+        </div>
+
+        <button type="submit" class="btn-primary">Add Expense</button>
+      </form>
+    </section>
+
+    <!-- Expense Table Card -->
+    <section class="card table-card">
+      <h2>Expense History</h2>
+      <div class="table-wrapper">
+        <table class="expense-table">
+          <thead>
+            <tr>
+              <th>Description</th>
+              <th>Category</th>
+              <th>Amount</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Grocery Shopping</td>
+              <td>Food</td>
+              <td>$85.50</td>
+              <td><button class="btn-delete">Delete</button></td>
+            </tr>
+            <tr>
+              <td>Electricity Bill</td>
+              <td>Utilities</td>
+              <td>$120.00</td>
+              <td><button class="btn-delete">Delete</button></td>
+            </tr>
+            <tr>
+              <td>Bus Pass</td>
+              <td>Transportation</td>
+              <td>$45.00</td>
+              <td><button class="btn-delete">Delete</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
